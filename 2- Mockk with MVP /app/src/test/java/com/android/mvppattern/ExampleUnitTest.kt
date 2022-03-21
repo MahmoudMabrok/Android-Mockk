@@ -1,4 +1,4 @@
-package com.android.mockkbasics
+package com.android.mvppattern
 
 import org.junit.Test
 

@@ -1,14 +1,11 @@
-package com.android.mockkbasics.mocks_testable_service.argument_matching
+package com.android.mockkbasics
 
-import com.android.mockkbasics.Dependency1
-import com.android.mockkbasics.Dependency2
-import com.android.mockkbasics.SystemUnderTest
 import io.mockk.every
 import io.mockk.mockk
-import junit.framework.Assert.assertEquals
+import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
-class ArgumentMatcherTest  {
+class ArgumentMatcherTest {
     @Test
     fun calculateAddsValues() {
         val doc1 = mockk<Dependency1>()
@@ -40,7 +37,7 @@ class ArgumentMatcherTest  {
 
         val sut = SystemUnderTest(doc1, doc2)
 
-        assertEquals(1, sut.calculateWithCall(3,2))
+        assertEquals(1, sut.calculateWithCall(3, 2))
     }
 
     // more, less, eq and or are argument matchers.

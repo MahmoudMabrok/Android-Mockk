@@ -1,7 +1,5 @@
-package com.android.mockkbasics.mocks_testable_service.annotation_example
+package com.android.mockkbasics
 
-import com.android.mockkbasics.InjectTestService
-import com.android.mockkbasics.TestableService
 import io.mockk.MockKAnnotations
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK

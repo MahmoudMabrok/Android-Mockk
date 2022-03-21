@@ -1,4 +1,4 @@
-package com.android.mockkbasics.mocks_testable_service.every_example
+package com.android.mockkbasics
 
 import com.android.mockkbasics.TestableService
 import io.mockk.every

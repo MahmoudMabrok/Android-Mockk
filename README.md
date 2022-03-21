@@ -39,6 +39,7 @@ Example : <br>
    @Test<br>
    fun validateString() {<br>
    every { TextUtils.isEmpty(param } returns true<br>
-   }
+   }<br> <br>
+   This is how you can mock static method isEmpty(param) of TextUtils class easily.
    
  

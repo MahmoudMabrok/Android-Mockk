@@ -4,8 +4,8 @@
 * [2- MockK](#2-MockK)
 
 ### 1-Some useful resources related to Mockk
-* Documentation https://mockk.io/
-* https://www.baeldung.com/kotlin/mockk
+* Documentation. https://mockk.io/
+* basic features of the MockK library. https://www.baeldung.com/kotlin/mockk
 
 
 ### MockK

@@ -8,31 +8,31 @@
 * basic features of the MockK library. https://www.baeldung.com/kotlin/mockk
 
 
-### MockK
+### 2-MockK
 * In Kotlin, all classes and methods are final. While this helps us write immutable code, it also causes some problems during testing.
 
 * Most JVM mock libraries have problems with mocking or stubbing final classes. Of course, we can add the “open” keyword to classes and methods that we want to mock. But changing classes only for mocking some code doesn’t feel like the best approach.
 
 * Here comes the MockK library, which offers support for Kotlin language features and constructs. MockK builds proxies for mocked classes. This causes some performance degradation, but the overall benefits that MockK gives us are worth it.
 
-#### Why is it better than a well known Mockito library for Kotlin?
+Why is it better than a well known Mockito library for Kotlin?<br>
 Mockk supports some important language features within Kotlin.
 
-##### 1- Final by default(Classes and methods in kotlin) :
+#### 1- Final by default(Classes and methods in kotlin) :
   Concerning Java, Kotlin classes (and methods) are final by default. That means Mockito requires some extra things to make it to work, whereas Mockk can    do this efficiently without any extra things.
-#####  2- Object mocking : 
+####  2- Object mocking : 
 Kotlin objects mean Java statics. Mockito alone doesn’t support mocking of statics. There are the same other frameworks required with Mockito to write tests, but again Mockk provides this without any extra things. <br>
 Example : <br>
  mockObject(MyObject) <br>
  every { MyObject.someMethod() } returns "Something"
- ##### 3- Extension functions :
+ #### 3- Extension functions :
  Since extension functions map to Java statics, again, Mockito doesn’t support mocking them. With Mockk, you can mock them without any extra configuration.
-  ##### 4- Chained mocking :
+  #### 4- Chained mocking :
   With Mockk you can chain your mocking, with this we can mock statements quite easily like you can see in the example below. We are using every{} block to mock methods.<br>
   Example : <br>
   val mockedClass = mockk()<br>
  every { mockedClass.someMethod().someOtherMethod() } returns "Something"
-  ##### 5- Mocking static methods
+  #### 5- Mocking static methods
    Mocking static methods is not easy in mockito but using mockK java static methods can easily be mocked using  mockStatic.<br>
    Example : <br>
    mockkStatic(TextUtils::class)<br>

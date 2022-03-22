@@ -9,6 +9,7 @@ import junit.framework.Assert.assertEquals
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
+import java.util.*
 
 class MainPresenterStaticTest {
 
@@ -33,14 +34,14 @@ class MainPresenterStaticTest {
     }
 
     @Test
-    fun fetchDataWithADifferentBehaviourOfUUIDGeneration() {
+    fun fetchDataWithAStaticBehaviourOfUUIDGeneration() {
 
         val uuid = "my-fake-uuid"
-        mockkObject(MyUselessUtils)
-        every { MyUselessUtils.generateUUID() } returns uuid
+        mockkStatic(UUID::class)
+        every { UUID.randomUUID().toString() } returns uuid
 
         every { dataRepository.fetchData() } returns listOf(DataModel(1, "Value"))
-        mainPresenter.fetchDataWithStaticUUID()
+        mainPresenter.fetchData()
 
         val captureData = slot<List<UiDataModel>>()
 
@@ -51,7 +52,6 @@ class MainPresenterStaticTest {
         }
         unmockkObject(MyUselessUtils)
     }
-
 
     @After
     fun tearDown() {

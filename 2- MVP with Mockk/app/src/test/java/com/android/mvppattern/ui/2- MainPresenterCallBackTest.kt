@@ -45,7 +45,6 @@ class MainPresenterCallBackTest {
 
         verify(exactly = 1) { view.onResult(capture(captureData)) }
 
-
         captureData.captured.let { res ->
             assertNotNull(res)
             assert(res.isNotEmpty())

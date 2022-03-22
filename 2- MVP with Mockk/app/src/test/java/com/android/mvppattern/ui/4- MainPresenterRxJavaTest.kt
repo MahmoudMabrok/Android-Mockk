@@ -49,7 +49,6 @@ class MainPresenterRxJavaTest {
 
     }
 
-
     @After
     fun tearDown() {
         unmockkAll()

@@ -31,7 +31,6 @@ class MockPresenterExceptionTest {
 
         val captureErrorData = slot<Throwable>()
 
-
         verify(exactly = 0) { view.onResult(any()) }
         verify(exactly = 1) { view.onError(capture(captureErrorData)) }
 

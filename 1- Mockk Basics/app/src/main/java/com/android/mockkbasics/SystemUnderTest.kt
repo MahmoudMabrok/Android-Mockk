@@ -13,7 +13,12 @@ class Dependency1(val value1: Int) {
 
 class Dependency2(val value2: String) {
     fun call(value: Int): Int {
+        result(value)
         return value
+    }
+
+    fun result(value: Int) {
+        // doing some work here
     }
 }
 

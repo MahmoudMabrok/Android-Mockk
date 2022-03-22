@@ -44,7 +44,6 @@ class CapturingExample {
          val result = mock.divide(5, 2)   // returns 55.
 
         assertEquals(55,result)
-
     }
 
     @Test
@@ -62,6 +61,5 @@ class CapturingExample {
         assertEquals(5, list[0])
         assertEquals(2, list[1])
         assertEquals(9, list[2])
-
     }
 }

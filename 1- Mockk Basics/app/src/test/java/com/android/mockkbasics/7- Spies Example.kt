@@ -1,7 +1,6 @@
 package com.android.mockkbasics
 
 import io.mockk.every
-import io.mockk.mockk
 import io.mockk.spyk
 import io.mockk.verify
 import junit.framework.TestCase.assertEquals
@@ -39,7 +38,5 @@ class SpiesExample {
          */
 
         assertEquals(14, spy.add(4, 5))
-
-
     }
 }

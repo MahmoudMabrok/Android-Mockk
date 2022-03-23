@@ -3,6 +3,8 @@ package com.android.testkotlincoroutines.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.testkotlincoroutines.R
@@ -39,17 +41,21 @@ class MainActivity : AppCompatActivity() {
         ViewModelProvider(this, mainViewModelFactory).get(MainViewModel::class.java)
     }
 
-    private val dataObserver = Observer<LiveDataResult<List<RepositoryModel>>> {
+    private val dataObserver = Observer<LiveDataResult<List<RepositoryModel>>> {liveData->
+        findViewById<AppCompatButton>(R.id.progressBar).isVisible = false
         // User data
-        when (it?.status) {
+        when (liveData?.status) {
             LiveDataResult.STATUS.ERROR -> {
 
             }
             LiveDataResult.STATUS.SUCCESS -> {
-
+                for(value in liveData.data!!){
+                    val text = findViewById<AppCompatTextView>(R.id.text).text.toString()
+                    findViewById<AppCompatTextView>(R.id.text).text = text + value.repositoryName+"\n"
+                }
             }
             LiveDataResult.STATUS.LOADING -> {
-
+                findViewById<AppCompatButton>(R.id.progressBar).isVisible = true
             }
         }
     }

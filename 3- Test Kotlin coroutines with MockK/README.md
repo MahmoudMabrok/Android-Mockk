@@ -1,4 +1,4 @@
-# Android-Mockk
+# Kotlin coroutines with MockK library
 
-In this project, we’re going to take a look at some of the basic features of the MockK library.
+In these article we will understand how implement the new Kotlin coroutines and how test them with MockK library. 
 

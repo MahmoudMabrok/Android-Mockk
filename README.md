@@ -17,7 +17,7 @@
 
 * Most JVM mock libraries have problems with mocking or stubbing final classes. Of course, we can add the “open” keyword to classes and methods that we want to mock. But changing classes only for mocking some code doesn’t feel like the best approach.
 
-* Here comes the MockK library, which offers support for Kotlin language features and constructs. MockK builds proxies for mocked classes. This causes some performance degradation, but the overall benefits that MockK gives us are worth it.
+* Here comes the MockK library, which offers support for Kotlin language features and constructs. MockK main intention is to be a convenient mocking library for everybody who develops in Kotlin.
 
 Why is it better than a well known Mockito library for Kotlin?<br>
 Mockk supports some important language features within Kotlin.
